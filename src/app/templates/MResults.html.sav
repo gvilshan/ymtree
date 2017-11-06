@@ -1,0 +1,18 @@
+<div>
+  <table>
+    <tr>
+      <td valign=top>
+        <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 99%, height: 99%}" data-dojo-attach-point="mresults" id="mresults" data-dojo-props="readOnly:false">
+        </div>
+      </td>
+    </tr>
+   <tr>
+      <td>
+        <div data-dojo-attach-point="mresultstree" data-dojo-type="dijit/layout/ContentPane" title="M Results">
+          <div id="theResultsM" data-dojo-attach-point="mresultstree2">
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

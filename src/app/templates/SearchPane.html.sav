@@ -1,0 +1,93 @@
+<div>
+  <!-- <div data-dojo-type="dijit/layout/ContentPane"> -->
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 99%; height: 125px;" data-dojo-id="recordsetContainer" data-dojo-attach-point="recordsetContainer">
+      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="myRecordsets" title="My Recordsets">
+        <div id="my_recordsets">
+        </div>
+      </div>
+      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="search" title="Search">
+        <table width=100%>
+        <tr><td>
+        Search Type:
+        <select name="select1" data-dojo-attach-point="searchTypeSelect" data-dojo-type="dijit/form/Select" style="width: 100px;">
+          <option value="simple" selected="selected">Simple</option>
+          <option value="advanced">Advanced</option>
+          <option value="expert">Expert</option>
+        </select>
+        </td><td alogn=right>
+        <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="findButton">Find It!</button>
+        </td></tr></table>
+        <div data-dojo-type="dijit/layout/StackContainer" data-dojo-attach-point="searchStackContainer">
+          <div data-dojo-type="dijit/layout/ContentPane" title="Simple" data-dojo-attach-point="simplePane">
+            <table>
+              <tr>
+                <td>Find records where:</td>
+                <td colspan=2>
+                  <select name="select2" data-dojo-attach-point="columnName" data-dojo-type="dijit/form/Select" style="width: 250px;">
+                    <option value="gprecord.gpid">GPID</option>
+                    <option value="gprecord.mhg">MtDNA Haplogroup</option>
+                    <option value="gprecord.yhg" selected="selected">Longhand Y Haplogroup</option>
+                    <option value="gprecord.dar_yhg">Shorthand Y Haplogroup</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>is:</td>
+                <td>
+                  <select name="select3" data-dojo-attach-point="filterOperator" data-dojo-type="dijit/form/Select" style="width: 50px;">
+                    <option value="equals" selected="selected">equal to</option>
+                    <option value="begins_with">containing</option>
+                    <option value="contains">beginning with</option>
+                    <option value="greater_than">greater than</option>
+                    <option value="less_than">less than</option>
+                  </select>
+                </td>
+                <td align=right rowspan=2 valign=bottom>
+<!--
+                  <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitEditorIconsFindReplace dijitEditorIconFind'" data-dojo-attach-point="searchRecords" type="button"></button>
+-->
+                <td>
+              </tr>
+              <tr>
+                <td>what:</td>
+                <td>
+                  <input style="width: 200px;" type="text" name="what" value="" data-dojo-attach-point="what_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+          <div data-dojo-type="dijit/layout/ContentPane" title="Advanced" data-dojo-attach-point="advancedPane">
+            <table>
+              <tr>
+                <td>Rule:</td>
+                <td>
+                  <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 240px; height: 50px;" data-dojo-attach-point="advanced_rule"></div>
+                </td>
+                <td valign=top>
+                  Criteria:<br>
+                  <select data-dojo-type="dijit/form/Select" style="width: 120px;">
+                    <option value=" ">&nbsp;</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div data-dojo-type="dijit/layout/ContentPane" title="Expert" data-dojo-attach-point="expertPane">
+            <table>
+              <tr>
+                <td>SQL:</td>
+                <td>
+                  <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 350px; height: 50px;" data-dojo-attach-point="expert_rule"></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="records" title="Records">
+      </div>
+    </div>
+  <!-- </div> -->
+</div>

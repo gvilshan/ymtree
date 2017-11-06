@@ -1,0 +1,191 @@
+<div>
+  <div id="recreate_dummy" data-dojo-attach-point="recreate">
+  </div>
+  <div data-dojo-type="dijit/layout/TabContainer" style="width: 99%; height: 132px;" data-dojo-attach-point="recordsetContainer">
+
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="search" title="Search">
+      <table width=100%>
+      <tr><td>
+      Search Type:
+      <select name="select1" data-dojo-attach-point="searchTypeSelect" data-dojo-type="dijit/form/Select" style="width: 100px;">
+        <option value="simple" selected="selected">Simple</option>
+        <option value="special">Special</option>
+        <option value="expert">Expert</option>
+      </select>
+      </td><td align=right>
+      <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="findButton">Find It!</button>
+      </td></tr></table>
+      <div data-dojo-type="dijit/layout/StackContainer" data-dojo-attach-point="searchStackContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" title="Simple" data-dojo-attach-point="simplePane">
+          <table>
+            <tr>
+              <td>Find records where:</td>
+              <td colspan=2>
+                <select name="select2" data-dojo-attach-point="columnName" data-dojo-type="dijit/form/Select" style="width: 230px;">
+                  <option value="gprecord.gpid">GPID</option>
+                  <option value="gprecord.mhg">MtDNA Haplogroup</option>
+                  <option value="gprecord.yhg" selected="selected">Longhand Y Haplogroup</option>
+                  <option value="gprecord.dar_yhg">Shorthand Y Haplogroup</option>
+                  <option value="haplosnps.snp">Y SNP</option>
+                  <option value="msnps.position">MtDNA Position</option>
+                  <option value="phenotype.age">Age</option>
+                  <option value="phenotype.postal_code">Postal Code</option>
+                  <option value="phenotype.mother_place_of_birth">mother_place_of_birth</option>
+                  <option value="phenotype.father_place_of_birth">father_place_of_birth</option>
+                  <option value="phenotype.mat_grandfather_place_of_birth">mat_grandfather_place_of_birth</option>
+                  <option value="phenotype.mat_grandmother_place_of_birth">mat_grandmother_place_of_birth</option>
+                  <option value="phenotype.pat_grandfather_place_of_birth">pat_grandfather_place_of_birth</option>
+                  <option value="phenotype.pat_grandmother_place_of_birth">pat_grandmother_place_of_birth</option>
+                  <option value="phenotype.mother_ethnicity">mother_ethnicity</option>
+                  <option value="phenotype.father_ethnicity">father_ethnicity</option>
+                  <option value="phenotype.mat_grandfather_ethnicity">mat_grandfather_ethnicity</option>
+                  <option value="phenotype.mat_grandmother_ethnicity">mat_grandmother_ethnicity</option>
+                  <option value="phenotype.pat_grandfather_ethnicity">pat_grandfather_ethnicity</option>
+                  <option value="phenotype.pat_grandmother_ethnicity">pat_grandmother_ethnicity</option>
+                  <option value="phenotype.mother_languages">mother_languages</option>
+                  <option value="phenotype.father_languages">father_languages</option>
+                  <option value="phenotype.earliest_mat_ancestor_ethnicity">earliest_mat_ancestor_ethnicity</option>
+                  <option value="phenotype.earliest_pat_ancestor_ethnicity">earliest_pat_ancestor_ethnicity</option>
+                  <option value="phenotype.earliest_mat_ancestor_language">earliest_mat_ancestor_language</option>
+                  <option value="phenotype.earliest_pat_ancestor_language">earliest_pat_ancestor_language</option>
+                  <option value="phenotype.earliest_mat_ancestor_place_of_birth">earliest_mat_ancestor_place_of_birth</option>
+                  <option value="phenotype.earliest_pat_ancestor_place_of_birth">earliest_pat_ancestor_place_of_birth</option>
+                  <option value="phenotype.all">search in all demographic fields</option>
+                </select>
+                <select name="select3" data-dojo-attach-point="rcCode" data-dojo-type="dijit/form/Select" style="width: 50px;">
+                  <option value="all" selected="selected">all</option>
+                  <option value="ftdna">ftdna</option>
+                  <option value="FW">1.0</option>
+                  <option value="NG">2.0</option>
+                  <option value="XT">2plus</option>
+                  <option value="RC">RC</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>is:</td>
+              <td>
+                <select name="select3" data-dojo-attach-point="filterOperator" data-dojo-type="dijit/form/Select" style="width: 50px;">
+                  <option value="equals" selected="selected">equal to</option>
+                  <option value="begins_with">beginning with</option>
+                  <option value="contains">containing</option>
+                  <option value="greater_than">greater than</option>
+                  <option value="less_than">less than</option>
+                </select>
+              </td>
+              <td align=right rowspan=2 valign=bottom>
+<!--
+                <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitEditorIconsFindReplace dijitEditorIconFind'" data-dojo-attach-point="searchRecords" type="button"></button>
+-->
+              <td>
+            </tr>
+            <tr>
+              <td>what:</td>
+              <td>
+                <input style="width: 200px;" type="text" name="what" value="" data-dojo-attach-point="what_input" data-dojo-type="dijit/form/ValidationTextBox" />
+              </td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div data-dojo-type="dijit/layout/ContentPane" title="Special" data-dojo-attach-point="specialPane">
+          <table>
+            <tr>
+              <td> <label>DYS393:</label></td><td><input style="width: 20px;" name="locus_1" type="text" data-dojo-attach-point=admin_dys393 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS390:</label></td><td><input style="width: 20px;" name="locus_2" type="text" data-dojo-attach-point=admin_dys390 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS19:</label></td><td><input style="width: 20px;" name="locus_3" type="text" data-dojo-attach-point=admin_dys19 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS391:</label></td><td><input style="width: 20px;" name="locus_4" type="text" data-dojo-attach-point=admin_dys391 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+            </tr>
+            <tr>
+              <td> <label>DYS385a:</label></td><td><input style="width: 20px;" name="locus_5" type="text" data-dojo-attach-point=admin_dys385a value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS385b:</label></td><td><input style="width: 20px;" name="locus_6" type="text" data-dojo-attach-point=admin_dys385b value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS426:</label></td><td><input style="width: 20px;" name="locus_7" type="text" data-dojo-attach-point=admin_dys426 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS388:</label></td><td><input style="width: 20px;" name="locus_8" type="text" data-dojo-attach-point=admin_dys388 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+            </tr>
+            <tr>
+              <td> <label>DYS439:</label></td><td><input style="width: 20px;" name="locus_9" type="text" data-dojo-attach-point=admin_dys439 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS389I:</label></td><td><input style="width: 20px;" name="locus_10" type="text" data-dojo-attach-point=admin_dys389i value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS392:</label></td><td><input style="width: 20px;" name="locus_11" type="text" data-dojo-attach-point=admin_dys392 value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+              <td> <label>DYS389II:</label></td><td><input style="width: 20px;" name="locus_12" type="text" data-dojo-attach-point=admin_dys389ii value="" required=false data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="invalidMessage:'Numbers only.'" /> </td>
+            </tr>
+          </table>
+        </div>
+
+        <div data-dojo-type="dijit/layout/ContentPane" title="Expert" data-dojo-attach-point="expertPane">
+          <table>
+            <tr>
+              <td>SQL:</td>
+              <td>
+                <div id="expert_rule" data-dojo-type="dijit/form/SimpleTextarea" style="width: 330px; height: 50px;" data-dojo-attach-point="expert_rule"></div>
+                <div data-dojo-type="dijit/form/Button" data-dojo-attach-point=validate_sql_button><img src="app/images/green_check_mark.png"></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" title="SearchResult" data-dojo-attach-point="searchResult">
+          <label>Found</label> <label id="gpids_count"></label> GPIDs.<br>
+          <label><tt>Save As:&nbsp;&nbsp;&nbsp;&nbsp;</tt></label><input style="width: 200px;" type="text" name="rs_name" value="" data-dojo-attach-point="recordset_name" data-dojo-type="dijit/form/ValidationTextBox" />
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="saveRecordset" type="button">Save</button>
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="dismissRecordset" type="button">Cancel</button><br>
+          <label><tt>Description:</tt></label><input style="width: 200px;" type="text" name="rs_description" value="" data-dojo-attach-point="recordset_description" data-dojo-type="dijit/form/ValidationTextBox" />
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" title="SearchProgress" data-dojo-attach-point="searchProgress">
+          <center><label>Please wait.</label></center>
+          <center><label>The search can take a few minutes.</label></center>
+          <center><img src="app/images/rotating_arrow.gif"></center>
+        </div>
+      </div>
+    </div>
+
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="myRecordsets" title="My Recordsets">
+      <div id="my_recordsets">
+      </div>
+    </div>
+
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="combineRecordsets" title="Combine">
+      <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left'" style="width: 280px;">
+          <label>Choose combination type:</label><br>
+          <select name="select4" data-dojo-attach-point="combinationType" data-dojo-type="dijit/form/Select" style="width: 100px;">
+            <option value="intersect" selected="selected">Intersect</option>
+            <option value="union">Union</option>
+            <option value="complement">Complement</option>
+          </select>
+          <button data-dojo-type="dijit/form/Button" id="TooltipButton" onmouseover="dijit.Tooltip.defaultPosition=['below']">?</button>
+          <div class="dijitHidden"><span data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'TooltipButton'"><strong>Intersect:</strong><br>GPIDs appearing in all recordsets<br><strong>Union:</strong><br>GPIDs appearing in at least one recordset<br><strong>Complement:</strong><br>GPIDs appearing only in first recordset but not in others</span></div>
+ 
+          <br>
+          Recordsets: <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="pickRecordsets" type="button">Pick...</button>
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="finishPicking" type="button">...Finished</button>
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="resetPick" type="button">Reset</button>
+          <br>
+          (once finished picking, return to this tab).
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" style="width: 150px;">
+          <div id="combine_recordsets">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="records" title="Records">
+      <table>
+        <tr>
+          <td width=160px>
+            <div id="my_records">
+            </div>
+          </td>
+          <td valign=top>
+            <div id="download_link" style="visibility: hidden;">
+              <a href="services/downloadRecordset.php" target="_blank">Download Genetic</a><br>
+              <a href="services/downloadDemographic.php" target="_blank">Download Demographic</a><br>
+              <a href="services/downloadBoth.php" target="_blank">Download Both</a><br>
+              <a href="services/downloadNetworkM.php" target="_blank">Download Network .rdf for MtDNA</a><br>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

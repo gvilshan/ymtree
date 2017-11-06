@@ -1,0 +1,70 @@
+<div style="width: 97%; height: 90%">
+  <span data-dojo-type="dijit/layout/StackController" data-dojo-props="containerId: 'assetsSwitcher'"></span>
+
+  <div data-dojo-type="dijit/layout/StackContainer" data-dojo-id="assetsSwitcher" style="width: 99%; height: 100%;">
+    <div data-dojo-type="dijit/layout/ContentPane">
+      <div style="height: 100%; width: 100%;">
+        <div data-dojo-type="dijit/layout/TabContainer" style="width: 99%; height: 90%;" data-dojo-id="assetContainer" data-dojo-attach-point="assetContainer">
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="introStoryContentPane" title="Intro Stories">
+            <div id="introAnchor"></div>
+            <div id="introSpace"></div>
+          </div>
+      
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="detailedStoryContentPane" title="Detailed Stories">
+            <div id="detailedAnchor"></div>
+            <div id="detailedSpace"></div>
+          </div>
+      
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="migrationMapContentPane" title="Migration Map">
+            <div id="m_mig_map">
+            </div>
+            <br>
+            <div id="migrationAnchor"></div>
+            <div id="migrationSpace"></div>
+            <br>
+            <br>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="maximizeMMap" style="width: 100px;">Maximize...</button>
+          </div>
+          <div data-dojo-type="dijit/layout/ContentPane" title="Heat Map" data-dojo-attach-point="heatMap" data-dojo-id="heatMap">
+            <div style="position: relative;">
+              <img style="width: 100%; position: absolute;" src=app/maps/basemap.jpg />
+              <img data-dojo-id="heatMapImage" data-dojo-attach-point="heatMapImage" style="width: 100%; position: relative;" src=app/maps/basemap.jpg />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-dojo-type="dijit/layout/ContentPane">
+      <div style="height: 100%; width: 100%;">
+        <div data-dojo-type="dijit/layout/TabContainer" style="width: 99%; height: 90%;" data-dojo-id="y_assetContainer" data-dojo-attach-point="y_assetContainer">
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="y_introStoryContentPane" title="Intro Stories">
+            <div id="y_introAnchor"></div>
+            <div id="y_introSpace"></div>
+          </div>
+      
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="y_detailedStoryContentPane" title="Detailed Stories">
+            <div id="y_detailedAnchor"></div>
+            <div id="y_detailedSpace"></div>
+          </div>
+      
+          <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="y_migrationMapContentPane" title="Migration Map">
+            <div id="y_mig_map">
+            </div>
+            <br>
+            <div id="y_migrationAnchor"></div>
+            <div id="y_migrationSpace"></div>
+            <br>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="maximizeYMap" style="width: 100px;">Maximize...</button>
+          </div>
+
+          <div data-dojo-type="dijit/layout/ContentPane" title="Heat Map" data-dojo-attach-point="y_heatMap" data-dojo-id="y_heatMap">
+            <div style="position: relative;">
+              <img style="width: 100%; position: absolute;" src=app/maps/basemap.jpg />
+              <img data-dojo-id="y_heatMapImage" data-dojo-attach-point="y_heatMapImage" style="width: 100%; position: relative;" src=app/maps/basemap.jpg />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

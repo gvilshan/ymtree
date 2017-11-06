@@ -1,0 +1,341 @@
+define([
+    "dojo/_base/window",
+    "dojo/on",
+    "dojo/dom",
+    "dojo/_base/declare",
+    "dojo/_base/lang",
+    "dijit/_WidgetBase"
+], function(window, on, dom, declare, lang, _WidgetBase) {
+     console.log("ENTERED Dispatcher");
+     window.global.app = {
+       name: "ymtree",
+       treeInitialState: "collapsed", // can be "expanded" and "collapsed".
+       widgets: {}
+     };
+     return declare([_WidgetBase], {
+       widgetLabel: "Dispatcher",
+       postCreate: function()
+       {
+         console.log("Dispatcher postCreate:", this);
+         console.log("Dispatcher window:", window);
+         window.global.app.widgets.Dispatcher = this;
+         on(window, "resize", function()
+         {
+           console.log("Resize requested", this.app);
+           window.location.assign("http://dar-dev.nationalgeographic.com/ymtree_aug2014/src/");
+         });
+       },
+
+       reopenMTree: function()
+       {
+         dijit_mtdnaTree.set('paths', [ window.global.app.widgets.MtdnaTree.mpath, window.global.app.widgets.MtdnaTree.mpath]);
+       },
+       reopenYTree: function()
+       {
+         dijit_yTree.set('paths', [ window.global.app.widgets.MtdnaTree.ypath, window.global.app.widgets.MtdnaTree.ypath]);
+       },
+       collapseComplete: function(tree)
+       {
+         console.log("Collapse complete; paths:", window.global.app.widgets.MtdnaTree.mpath, window.global.app.widgets.MtdnaTree.ypath);
+         if(tree == "m")
+         {
+           setTimeout(this.reopenMTree, 4000);
+         }
+         else
+         {
+           setTimeout(this.reopenYTree, 4000);
+         }
+       },
+       collapseAndReopenTree: function(tree)
+       {
+         console.log("Dispatcher: collapseTree", tree);
+         var treePane = window.global.app.widgets.MtdnaTree;
+         console.log("Dispatcher: treePane", treePane);
+         if(tree == "m")
+         {
+           console.log("dijit_mtdnaTree:", dijit_mtdnaTree);
+           dijit_mtdnaTree.collapseAll().then(this.collapseComplete(tree));
+         }
+         else
+         {
+           dijit_yTree.collapseAll().then(this.collapseComplete(tree));
+         }
+       },
+       collapseTree: function(tree)
+       {
+         console.log("Dispatcher: collapseTree", tree);
+         var treePane = window.global.app.widgets.MtdnaTree;
+         console.log("Dispatcher: treePane", treePane);
+         if(tree == "m")
+         {
+           console.log("dijit_mtdnaTree:", dijit_mtdnaTree);
+           dijit_mtdnaTree.collapseAll();
+         }
+         else
+         {
+           dijit_yTree.collapseAll();
+         }
+       },
+
+       showGpidPane: function()
+       {
+         console.log("Dispatcher showGpidPane:", this);
+         this.mainContainer.removeChild(this.loginContainer);
+         if(this.admin == "admin")
+         {
+           this.mainContainer.addChild(this.gpidContainer);
+           var node = dom.byId("greeting");
+           node.innerHTML = "Welcome,<br>" + this.humanname + "!";
+         }
+         else
+         {
+           this.mainContainer.addChild(this.gpidUserContainer);
+           node = dom.byId("greeting_user");
+           node.innerHTML = "Welcome,<br>" + this.humanname + "!";
+         }
+         var a = lang.hitch(window.global.app.widgets.SearchPane, window.global.app.widgets.SearchPane.userLoggedIn);
+         a();
+         a = lang.hitch(window.global.app.widgets.SearchPaneUser, window.global.app.widgets.SearchPaneUser.userLoggedIn);
+         a();
+       },
+
+       showLoginPane: function()
+       {
+         console.log("Dispatcher showLoginPane:", this);
+         this.mainContainer.removeChild(this.gpidContainer);
+         this.mainContainer.removeChild(this.gpidUserContainer);
+         this.mainContainer.addChild(this.loginContainer);
+       },
+
+       generateHgInfo: function(newhg, treename)
+       { // Given Haplogroup name and the tree it belongs to ('m' or 'h'), produce:
+         // hg_path: array of haplogroups all the way to the root;
+         // id_path: array of tree ids all the way to the root;
+         // heatmap_id: name of haplogroup or marker for which the heatmap is available;
+         // heatmap_file: file name from which to load the heatmap image;
+         // mutations: set of markers or mutations for haplogroup;
+         // shorthand: shorthand notation for YHG (yhg only; empty for Mtdna).
+         var response = {};
+         var id_path = [];
+         var hg_path = [];
+         var heatmap_id = "";
+         var heatmap_file = "";
+         var mutations = "";
+         var shorthand = "";
+         var hgname = newhg;
+         if(treename == 'm')
+         {
+           var tree = window.global.app.widgets.MtdnaTree.mtdnaTree;
+           // Find tree node by name
+           var node_id = -1;
+           for(var i=0; i<tree.length; i++)
+           {
+             if(tree[i].hgname == hgname)
+             {
+               node_id = i;
+               break;
+             }
+           }
+           if(node_id == -1) return response;
+           // travrse up
+           var current_id = node_id.toString();
+           while(current_id != -1)
+           {
+             id_path.unshift(current_id.toString());
+             hg_path.unshift(tree[Number(current_id)].hgname);
+             current_id = tree[Number(current_id)].parent;
+           }
+           // Find heatmap info 
+           for(var i=0; i<id_path.length; i++)
+           {
+             if(tree[id_path[i]].heatmap == "t") heatmap_id = tree[id_path[i]].hgname;
+           }
+           heatmap_file = "app/maps/heatmaps/" + treename + "/" + heatmap_id + ".png";
+           // Find mutations info
+           var mhgList = window.global.app.widgets.HgSearch.mhgList;
+           var mut = [];
+           for(var i=0; i<mhgList.length; i++)
+           {
+             if(mhgList[i].name == hgname)
+             {
+               mut = mhgList[i].mutations.split(",");
+               break;
+             }
+           }
+         }
+         if(treename == 'y')
+         {
+           var tree = window.global.app.widgets.MtdnaTree.yTree;
+           var assetIndex = window.global.app.widgets.HgSearch.assetIndex;
+
+           // Find tree node by name
+           var node_id = -1;
+           for(var i=0; i<tree.length; i++)
+           {
+             if(tree[i].hgname == hgname)
+             {
+               node_id = i;
+               break;
+             }
+           }
+           if(node_id == -1) return response;
+           // travrse up
+           var current_id = node_id.toString();
+           while(current_id != "-1")
+           {
+             id_path.unshift(current_id);
+             // hg_path.unshift(tree[Number(current_id)].hgname);
+             var mut_string = tree[current_id].mutations;
+             var mut = mut_string.split(",");
+             for(var i=0; i<mut.length; i++)
+             {
+               for(var j=0; j<assetIndex.length; j++)
+               {
+                 if(mut[i] == assetIndex[j].snp_name)
+                 {
+                   hg_path.unshift(mut[i]);
+                   if(assetIndex[j].heatmap_image != null)
+                   {
+                     heatmap_id = assetIndex[j].snp_name;
+                     heatmap_file = "app/maps/heatmaps/" + treename + "/" + heatmap_id + ".png";
+                   }
+                 }
+               }
+             }
+             current_id = tree[current_id].parent;
+           }
+           // Find mutations info
+           var yhgList = window.global.app.widgets.HgSearch.yhgList;
+           var mut = [];
+           for(var i=0; i<yhgList.length; i++)
+           {
+             if(yhgList[i].name == hgname)
+             {
+               mut = yhgList[i].mutations.split(",");
+               shorthand = yhgList[i].shorthand;
+               break;
+             }
+           }
+         }
+         response.mutations = mut;
+         response.id_path = id_path;
+         response.hg_path = hg_path;
+         response.heatmap_id = heatmap_id;
+         response.heatmap_file = heatmap_file;
+         response.shorthand = shorthand;
+         console.log("response by generateHgInfo:", response);
+         return response;
+       },
+       onHaplogroupChange: function(origin, newhg, tree)
+       {
+         console.log("Dispatcher onHaplogroupChange from ", origin, newhg, tree);
+         var response = this.generateHgInfo(newhg, tree);
+         if(origin == "HgSearch")
+         {
+           console.log("response:", response);
+           // Fill out Editor panes
+           window.global.app.widgets.StoryEditor.onHaplogroupChange("Dispatcher",
+             response.hg_path,
+             response.id_path,
+             tree,
+             response.heatmap_id,
+             response.heatmap_file
+           );
+           // Open the tree path
+           console.log("dijit_ytree:", dijit_yTree);
+           if(tree == 'y')
+           {
+             window.global.app.widgets.MtdnaTree.ypath = response.id_path;
+             this.collapseAndReopenTree("y");
+             // dijit_yTree.set('paths', [ response.id_path, response.id_path ]);
+             var infoNode = dom.byId("shorthand");
+             infoNode.innerHTML = "<br><br>Shorthand:<br>" + response.shorthand;
+             window.global.app.widgets.HgSearch.populateMarkerList("y_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.y_mutations.set("displayedValue", response.mutations);
+           }
+           if(tree == 'm')
+           {
+             window.global.app.widgets.MtdnaTree.mpath = response.id_path;
+             this.collapseAndReopenTree("m");
+             // dijit_mtdnaTree.set('paths', [ response.id_path, response.id_path ]);
+             window.global.app.widgets.HgSearch.populateMarkerList("m_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.m_mutations.set("displayedValue", response.mutations);
+           }
+         }
+         if(origin == "MtdnaTree")
+         {
+           // Fill out Editor panes
+           window.global.app.widgets.StoryEditor.onHaplogroupChange("Dispatcher",
+             response.hg_path,
+             response.id_path,
+             tree,
+             response.heatmap_id,
+             response.heatmap_file
+           );
+           // Don't need to open tree path
+           // but need to fill out HgSearch stuff
+           if(tree == 'y')
+           {
+             var infoNode = dom.byId("shorthand");
+             infoNode.innerHTML = "<br><br>Shorthand:<br>" + response.shorthand;
+             window.global.app.widgets.HgSearch.populateMarkerList("y_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.y_mutations.set("displayedValue", response.mutations);
+             window.global.app.widgets.HgSearch.yhgSelect.set("value", response.id_path[response.id_path.length - 1]);
+           }
+           if(tree == 'm')
+           {
+             window.global.app.widgets.HgSearch.populateMarkerList("m_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.m_mutations.set("displayedValue", response.mutations);
+             window.global.app.widgets.HgSearch.mhgSelect.set("value", response.id_path[response.id_path.length - 1]);
+           }
+         }
+         if(origin == "GpidPane")
+         {
+           // Fill out Editor panes
+           window.global.app.widgets.StoryEditor.onHaplogroupChange("Dispatcher",
+             response.hg_path,
+             response.id_path,
+             tree,
+             response.heatmap_id,
+             response.heatmap_file
+           );
+           // Open the tree path
+           console.log("dijit_ytree:", dijit_yTree);
+           if(tree == 'y')
+           {
+             window.global.app.widgets.MtdnaTree.ypath = response.id_path;
+             this.collapseAndReopenTree("y");
+             // dijit_yTree.set('paths', [ response.id_path, response.id_path ]);
+             var infoNode = dom.byId("shorthand");
+             infoNode.innerHTML = "<br><br>Shorthand:<br>" + response.shorthand;
+             window.global.app.widgets.HgSearch.populateMarkerList("y_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.y_mutations.set("displayedValue", response.mutations);
+           }
+           if(tree == 'm')
+           {
+             window.global.app.widgets.MtdnaTree.mpath = response.id_path;
+             this.collapseAndReopenTree("m");
+             // dijit_mtdnaTree.set('paths', [ response.id_path, response.id_path ]);
+             window.global.app.widgets.HgSearch.populateMarkerList("m_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.m_mutations.set("displayedValue", response.mutations);
+           }
+
+           // Fill out HgSearch stuff
+           if(tree == 'y')
+           {
+             var infoNode = dom.byId("shorthand");
+             infoNode.innerHTML = "<br><br>Shorthand:<br>" + response.shorthand;
+             window.global.app.widgets.HgSearch.populateMarkerList("y_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.y_mutations.set("displayedValue", response.mutations);
+             window.global.app.widgets.HgSearch.yhgSelect.set("value", response.id_path[response.id_path.length - 1]);
+           }
+           if(tree == 'm')
+           {
+             window.global.app.widgets.HgSearch.populateMarkerList("m_mutations_grid", response.mutations);
+             //// window.global.app.widgets.HgSearch.m_mutations.set("displayedValue", response.mutations);
+             window.global.app.widgets.HgSearch.mhgSelect.set("value", response.id_path[response.id_path.length - 1]);
+           }
+         }
+       }
+     });
+});

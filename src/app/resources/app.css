@@ -1,0 +1,205 @@
+/**
+ * If you are developing a project that makes use of Dijit widgets, you will probably want to include the two files
+ * below; otherwise, you can remove them. When building for release, Dojo will automatically combine all of your
+ * @imported CSS files into a single file.
+ *
+ * It is highly, highly recommended that you develop your CSS using Stylus: http://learnboost.github.com/stylus/.
+ */
+
+@import '../../dojo/resources/dojo.css';
+@import '../../dijit/themes/soria/soria.css';
+@import '../../dojox/editor/plugins/resources/css/Save.css';
+@import '../../dojox/editor/plugins/resources/css/FindReplace.css';
+
+.topImage{
+  background-image: url("../../app/images/landmark.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+/*  height: 50px; */
+  vertical-align: text-top;
+  background-position: right top;
+}
+
+/*
+#mcp {
+  position: relative;
+}
+*/
+#m_migrationAnchor
+{
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+}
+
+#m_migrationSpace
+{
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+}
+
+#m_zoomer
+{
+  position: absolute;
+  bottom: 66px;
+  left: 10px;
+}
+
+/*
+#dijit_form_HorizontalRuleLabels_2
+{
+  border: 1px solid rgb(255,255,255);
+}
+*/
+
+#combine_recordsets {
+  width: 120px;
+}
+#combine_recordsets_user {
+  width: 120px;
+}
+#my_records_user {
+  width: 120px;
+}
+#my_records {
+  width: 120px;
+}
+#my_recordsets {
+  width: 400px;
+}
+#my_recordsets_user {
+  width: 400px;
+}
+#my_recordsets .field-info {
+  width: 12px;
+}
+#my_recordsets .field-name {
+  width: 60px;
+}
+#my_recordsets .field-created {
+  width: 69px;
+}
+#my_recordsets .field-description {
+  width: 67px;
+}
+#my_recordsets_user .field-info {
+  width: 12px;
+}
+#my_recordsets_user .field-name {
+  width: 60px;
+}
+#my_recordsets_user .field-created {
+  width: 69px;
+}
+#my_recordsets_user .field-description {
+  width: 67px;
+}
+#m_them .field-dist {
+  width: 35px;
+  text-align: right;
+}
+#m_them .field-gpid10 {
+  width: 97px;
+}
+
+#m_you {
+  border: 1px solid #DDDDDD;
+  display: block;
+  height: 560px;
+  overflow: auto;
+  position: relative;
+}
+.dgrid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+}
+dijitTreeIndent{
+  width: 9px;
+}
+#stackContainer {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+#stackContainer div {
+  padding: 5px;
+}
+#ancientPopulations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#regionalPopulations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#closestPopulations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#ancientPopulations1 {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#regionalPopulations1 {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#closestPopulations1 {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#q_str_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#q_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#q_m_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#p_str_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#p_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#p_m_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#m_mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+#mutations {
+  background-image: url("../../app/images/blank.png");
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+#borderContainer1 {
+  width: 100%;
+  height: 100%;
+}

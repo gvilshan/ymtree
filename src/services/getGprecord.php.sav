@@ -1,0 +1,9 @@
+<?php
+  require("dbconnect-replica.php");
+  $rc = $_REQUEST['rc'];
+  $gpid = $_REQUEST['gpid'];
+  $query = "select * from geno.gprecord where rc='$rc' and gpid='$gpid';";
+  $result = pg_query($query);
+  $response = pg_fetch_all($result);
+  echo json_encode($response);
+?>

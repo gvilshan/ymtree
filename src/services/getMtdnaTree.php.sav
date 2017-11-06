@@ -1,0 +1,24 @@
+<?php
+  require("dbconnect.php");
+  $query = "select a.nodeid as id, a.haplogroup as name, a.haplogroup as hgname, a.parentid as parent, a.mutations as mutations, b.id as storyid, b.intro is not null as intro, b.body_text is not null as story, b.heatmap_image is not null as heatmap, b.age_text is not null as age from geno.mt_haplotree a left outer join geno.assets b on (a.haplogroup = b.snp_name and b.is_ydna = 0);";
+  $result = pg_query($query);
+  $response = pg_fetch_all($result);
+  pg_free_result($result);
+
+  foreach($response as $n=>$v)
+  {
+    print_r($n);
+    echo "\n";
+    if($v['storyid'] != NULL)
+    {
+      $response[$n]['name'] = '<b>' . $v['name'] . '</b>';
+    }
+/*
+    print_r($n);
+    echo "\n";
+    print_r($v);
+    echo "\n";
+*/
+  }
+  echo json_encode($response);
+?>

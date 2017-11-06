@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html dir="ltr" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" class="no-js ie ie6 lte7 lte8 lte9"><![endif]-->
+<!--[if IE 7 ]><html dir="ltr" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" class="no-js ie ie7 lte7 lte8 lte9"><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" class="no-js ie ie8 lte8 lte9"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" class="no-js ie ie9 lte9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" class="no-js"><!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		
+		
+		<meta name="viewport" content="width=1080" />
+
+		<!--Adds HTML5 Tags to IE7,8--> 
+		<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/modernizr-2.0.6.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
+		<!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/selectivizr-min.js"></script>
+		<![endif]-->
+
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		
+		<!--StyleSheets--> 
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/style.css" />
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/css/src/reset.css"/>
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/css/print.min.css" media="print"/>
+		<!--External CSS-->
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/video-js/video-js.css">
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/fancybox/jquery.fancybox-1.3.4.css"/>
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/jquery.qtip/jquery.qtip.min.css"/>
+		<!--Master CSS-->
+		<link rel="stylesheet" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/css/screen.css"/>		
+		<link rel="pingback" href="https://genographic.nationalgeographic.com/xmlrpc.php"/>
+		<!--Share Image-->
+				<link rel="image_src" type="image/png" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/chad_06-115x115.jpg" />
+		<meta property="og:image" content="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/chad_06-115x115.jpg" />
+				<!-- For iPhone 4 -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/favicon.ico">
+		<!-- For iPad 1-->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/favicon.ico">
+		<!-- For iPhone 3G, iPod Touch and Android -->
+		<link rel="apple-touch-icon-precomposed" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/favicon.ico">
+		<!-- For everything else -->
+		<link rel="shortcut icon" href="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/favicon.ico">
+
+		<!--iOS. Delete if not required -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-startup-image" href="img/splash.png">
+
+		<!--Microsoft. Delete if not required -->
+		<meta http-equiv="cleartype" content="on">
+		<!--[if lt IE 7 ]>
+			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+		<![endif]-->
+		
+		<!-- Scripts -->
+		
+		<!-- JS scripts concatenated and minified via ant build script-->
+		<script type="text/javascript" src="https://use.typekit.com/zmt5idj.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<!--Loading EXTERNAL LIBS -->
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/jquery.isotope.min.js"></script>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/fancybox/jquery.easing-1.3.pack.js"></script>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/jquery.tools.min.js"></script>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/jquery.qtip/jquery.qtip.min.js"></script>
+		<script src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/video-js/video.js"></script>
+		<script>
+		  _V_.options.flash.swf = "https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/libs/video-js/video-js.swf";
+		</script>
+
+		<script type="text/javascript" src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/js/global.js?1375311321"></script>
+		
+		<style type="text/css">
+
+	
+  #main_bg {
+  	/* background: url("") no-repeat fixed center; */
+  	background-size: 100;
+  	background-size: cover;
+	}			
+     
+</style>
+
+<script type="text/javascript">
+  var bg_urls = ["https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/06\/background_NationalGeographic_1369992.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/06\/background_NationalGeographic_1403817.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/08-Background-NationalGeographic_1276640.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/03-Background-NationalGeographic_1369883.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/01-Background-NationalGeographic_1440004.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/12-Background-NationalGeographic_494231.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/10-Background-NationalGeographic_1033133.jpg","https:\/\/genographic.nationalgeographic.com\/wp-content\/uploads\/2012\/09\/09-Background-NationalGeographic_1055410.jpg"];
+  var bg_desc = ["Photograph by Frans Lanting, National Geographic","Photograph by Frans Lanting, National Geographic","Photograph by Jim Richardson","Photograph by Frans Lanting","Photograph by Frans Lanting","Photograph by Jim Richardson","Photograph by Jim Richardson","Photograph by Jim Richardson"];
+  
+  var rand = Math.floor(Math.random()*bg_urls.length);
+
+  if(bg_urls[rand] != undefined)
+    GENO_BG_url = bg_urls[rand];
+  if(bg_desc[rand] != undefined)
+    GENO_BG_img_credit = bg_desc[rand];
+
+  $(document).ready(function(){
+    if(GENO_BG_url) {
+      $('#main_bg').css('background', 'url('+GENO_BG_url+') no-repeat fixed center');
+      $('#main_bg').css('background-size', 'cover');
+    }
+    if(GENO_BG_img_credit)
+      $('#legal').append(' '+GENO_BG_img_credit);
+  });
+</script>
+
+
+
+				
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.2.8.7 - http://yoast.com/wordpress/seo/ -->
+<title>The Genographic Project by National Geographic - Human Migration, Population Genetics</title>
+<meta name="description" content="Led by National Geographic Explorer-in-Residence Dr. Spencer Wells, the Genographic Project uses advanced DNA analysis to better understand human genetic roots."/>
+<meta name="keywords" content="genographic project, national geographic, spencer wells, genetics"/>
+<link rel="canonical" href="https://genographic.nationalgeographic.com/" />
+<meta property='og:locale' content='en_US'/>
+<meta property='og:title' content='The Genographic Project by National Geographic - Human Migration, Population Genetics'/>
+<meta property='og:description' content='Led by National Geographic Explorer-in-Residence Dr. Spencer Wells, the Genographic Project uses advanced DNA analysis to better understand human genetic roots.'/>
+<meta property='og:url' content='https://genographic.nationalgeographic.com/'/>
+<meta property='og:site_name' content='Genographic Project'/>
+<meta property='og:type' content='article'/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Genographic Project &raquo; Feed" href="https://genographic.nationalgeographic.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Genographic Project &raquo; Comments Feed" href="https://genographic.nationalgeographic.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Genographic Project &raquo; Home Page Comments Feed" href="https://genographic.nationalgeographic.com/home-page/feed/" />
+<link rel='stylesheet' id='portfolio_slideshow-css'  href='https://genographic.nationalgeographic.com/wp-content/plugins/portfolio-slideshow-pro/css/portfolio-slideshow.css?ver=1.7.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='https://genographic.nationalgeographic.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='https://genographic.nationalgeographic.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://genographic.nationalgeographic.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://genographic.nationalgeographic.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.4.2" />
+
+<!-- Portfolio Slideshow-->
+<noscript><link rel="stylesheet" type="text/css" href="https://genographic.nationalgeographic.com/wp-content/plugins/portfolio-slideshow-pro/css/portfolio-slideshow-noscript.css?ver=1.7.2" /></noscript><style type="text/css">.centered a.next.browse.right {} .scrollable {height:100px;} a.prev.browse.left {top:55px} a.next.browse.right {top:-60px} .slideshow-wrapper .pscarousel img {margin-right:8px !important; margin-bottom:8px !important;} }</style><script type="text/javascript">/* <![CDATA[ */var psTimeout = new Array(); psAudio = new Array(); var psAutoplay = new Array(); var psDelay = new Array(); var psFluid = new Array(); var psTrans = new Array(); var psRandom = new Array(); var psCarouselSize = new Array(); var touchWipe = new Array(); var psPagerStyle = new Array(); psCarousel = new Array(); var psSpeed = new Array(); var psLoop = new Array(); var psClickOpens = new Array(); /* ]]> */</script>
+<!--//Portfolio Slideshow-->
+	</head>
+
+<body class="home page page-id-33 page-template page-template-home-php">
+
+<div id="page"> 
+     <div id="main_bg"></div>
+    <header>
+	  
+      <div class="admin_nav container">
+            <a id="nat_geo_logo" href="http://www.nationalgeographic.com/" target="_blank">
+                <img src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/nat_geo_logo.jpg" alt="National Geographic"/>
+            </a>
+      </div>  	
+	
+<div class="main_nav_wrap">
+      <div class="container group">
+          
+          <a id="main_logo" href="/">
+               <img src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/main_logo.png" alt="The Genographic Project"/>
+			   <span>2.0 BETA</span>
+          </a>
+          
+            
+          
+                    <nav id="main_nav" class="menu-main-nav-container"><ul id="menu-main-nav" class="menu"><li id="menu-item-5041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5041"><a href="/about/">About</a></li>
+<li id="menu-item-3693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3693"><a href="/news/">News</a></li>
+<li id="menu-item-3694" class="menu-item menu-item-type-custom menu-item-object-custom menu-parent-item menu-item-3694"><a href="/results/">Results</a>
+<ul class="sub-menu">
+	<li id="menu-item-3573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3573"><a href="/results/">Check Results</a></li>
+	<li id="menu-item-3695" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3695"><a href="/results/upgrade">Upgrade My Account</a></li>
+</ul>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://shop.nationalgeographic.com/ngs/browse/productDetail.jsp?productId=2001246&amp;gsk&amp;code=MR20936">Buy the Kit</a></li>
+<li id="menu-item-3582" class="menu-item menu-item-type-custom menu-item-object-custom menu-parent-item menu-item-3582"><a>Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-3696" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3696"><a href="/science-behind/">The Science Behind</a></li>
+	<li id="menu-item-3698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3698"><a href="/for-scientists/">For Scientists</a></li>
+	<li id="menu-item-3697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3697"><a href="/for-educators/">For Educators</a></li>
+	<li id="menu-item-3699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3699"><a href="/press/">Press</a></li>
+	<li id="menu-item-3700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3700"><a href="/newsletter/">Newsletter</a></li>
+	<li id="menu-item-3702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3702"><a href="/faq/about-project/">FAQ</a></li>
+	<li id="menu-item-3703" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3703"><a href="/glossary/a-d/">Glossary</a></li>
+	<li id="menu-item-3701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3701"><a href="/legacy-fund/">Legacy Fund</a></li>
+	<li id="menu-item-3704" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3704"><a href="/human-journey/">Map of Human Migration</a></li>
+</ul>
+</li>
+</ul></nav>          </div>
+</div>
+
+		<!-- Load dynamic data -->
+	    <script type="text/javascript">
+	    	$(function() {
+	    		$.ajax({
+	    			type: 'GET',
+	    			url: '/results/login/nav',
+	    			dataType: 'html',
+	    			success: function(html) {
+	    				$('#page .admin_nav').append(html);
+	    			}
+	    		});
+	    	});
+	    </script>
+
+	</header>
+
+	<script type="text/javascript">
+		var count_message = 600881;
+		var holder = '#stats-messages-counter';
+		
+		$(document).ready(function() {
+			NG_GENO.do_ticker(holder, count_message);
+		});
+	</script>	
+	<section id="main" class="container group w-bg home"> 
+        
+        <div class="body">
+          <div class="corner"></div>
+          <h1 class="white">Geno 2.0: The Greatest Journey Ever Told</h1>
+          <h2>Your Story. Our Story. The Human Story.</h2>
+          <p>Since its launch in 2005, National Geographic’s Genographic Project has used advanced DNA analysis and worked with indigenous communities to help answer fundamental questions about where humans originated and how we came to populate the Earth. Now, cutting-edge technology is enabling us to shine a powerful <em>new</em> light on our collective past. By participating in the latest phase of this real-time scientific project, you can learn more about yourself than you ever thought possible. You will also help support the Genographic Legacy Fund, which works to conserve and revitalize indigenous cultures around the world.</p>
+          
+          <!--
+          <div class="video"><img width="586" height="327" src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/temp/video.jpg"></div>
+          -->
+          <video id="my_video_1"  class="video-js vjs-default-skin video" controls
+            preload="none" width="586" height="327" poster="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/video-covers/home-video-2-sm.jpg"
+            data-setup="{}">
+             <source src="/assets/video/Geno2Video-URL.mp4" type='video/mp4' />
+          </video>
+          <a class="nat-button" href="/about">About The Project
+            <div class="bf"></div>
+            <div class="af"></div>
+          </a>
+        </div><!--Body -->
+        <aside>
+          <div class="corner"></div>
+          
+          <nav><ul class="sb-nav">  
+                
+                <li>
+                  <a href="/about"> Learn More                    <div class="bf"></div>
+                    <div class="af"></div>
+                  </a>
+                </li>
+
+                  
+                
+                <li>
+                  <a href="http://shop.nationalgeographic.com/ngs/browse/productDetail.jsp?productId=2001246&amp;gsk&amp;code=MR20944"> Join the Project                    <div class="bf"></div>
+                    <div class="af"></div>
+                  </a>
+                </li>
+
+                  
+                
+                <li>
+                  <a href="/results/"> Check Your Results                    <div class="bf"></div>
+                    <div class="af"></div>
+                  </a>
+                </li>
+
+                </ul></nav>          
+          <div class="infox-box">
+              <h3>Genographic  Project  News</h3>
+              <h2>
+                                  <a href="/news/">'Gathering' the Irish Genes</a>
+                </h2>
+              <p><p>County Mayo, Ireland invites the Genographic Project to take a genetic snapshot of Ireland. Prime Minister and local celebrities participate.</p>
+</p>
+              <a class="more_info" href="/news/">Read More</a>
+          </div>
+          <div class="stats">
+          	  <p id="stats-messages-counter"><span class="numbers">292,678</span></p>
+              <img src="https://genographic.nationalgeographic.com/wp-content/themes/genographic/assets/img/temp/stats-new.png" />
+          </div>
+		  <div class="social">
+			Share This Project
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ffcb026029c2f6a"></script>
+			<!-- AddThis Button END -->
+		  </div>
+        </aside>
+        <div class="hidden">
+          <img src="/assets/img/neo-anim/neo-anim.jpg"/>
+        </div>  
+    </section>
+		 <footer>
+			
+		 	<div class="y_border"></div>
+			<div class="container">
+				
+
+
+        <nav class="foot-nav-1"><ul id="menu-footer-row-1" class="menu"><li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/about/">About</a></li>
+<li id="menu-item-3705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3705"><a href="/news/">News</a></li>
+<li id="menu-item-3706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3706"><a href="/results/">Check Your Results</a></li>
+<li id="menu-item-3707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3707"><a href="/results/upgrade/">Upgrade Your Account</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="http://shop.nationalgeographic.com/ngs/browse/productDetail.jsp?productId=2001246&amp;gsk&amp;code=MR20937">Buy the Kit</a></li>
+</ul></nav>        <nav class="foot-nav-2"><ul id="menu-footer-row-2" class="menu"><li id="menu-item-3708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3708"><a href="/science-behind/">The Science Behind</a></li>
+<li id="menu-item-3709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3709"><a href="/for-scientists/">For Scientists</a></li>
+<li id="menu-item-3710" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3710"><a href="/for-educators/">For Educators</a></li>
+<li id="menu-item-3711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3711"><a href="/press/">Press</a></li>
+<li id="menu-item-3712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3712"><a href="/newsletter/">Newsletter</a></li>
+<li id="menu-item-3713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3713"><a href="/faq/about-project/">FAQ</a></li>
+<li id="menu-item-3714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3714"><a href="/glossary/a-d/">Glossary</a></li>
+<li id="menu-item-3716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3716"><a href="/site-index/">Site Index</a></li>
+<li id="menu-item-5040" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5040"><a href="/contact-us/">Contact Us</a></li>
+<li id="menu-item-628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-628"><a href="http://www.nationalgeographic.com/community/privacy/">Privacy Policy</a></li>
+<li id="menu-item-4684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4684"><a href="http://www.nationalgeographic.com/community/terms/">Terms of Service</a></li>
+</ul></nav>
+			<p id="legal">&copy; 2013 National Geographic Society. All rights reserved.</p>
+				<div class="social">
+						<span>Follow us</span>
+						<a class="twitter" href="https://twitter.com/genographic" target="_blank"></a>
+						<a class="facebook" href="https://www.facebook.com/genographic" target="_blank"></a>
+				</div>
+			</div>
+
+		<!-- beg Analytics CODE-->  
+		<script>
+		var ngs_contentgroup="Genographic",
+		   ngs_reportsuite="natgeogenographic";
+		</script>
+		<script src="https://www-s.nationalgeographic.com/wpf/sites/common/j/analytics.js"></script>
+		<!-- end Analytics CODE-->
+
+		</footer><!-- footer -->
+<script type='text/javascript'>/* <![CDATA[ */ var portfolioSlideshowOptions = { psFancyBox:false, psHash:false, psThumbSize:'75', psFluid:false, psTouchSwipe:false, psKeyboardNav:false, psBackgroundImages:true, psInfoTxt:'of' };/* ]]> */</script><script type='text/javascript' src='https://genographic.nationalgeographic.com/wp-content/plugins/portfolio-slideshow-pro/js/scrollable.min.js?ver=1.2.5'></script>
+<script type='text/javascript' src='https://genographic.nationalgeographic.com/wp-content/plugins/portfolio-slideshow-pro/js/portfolio-slideshow.js?ver=1.7.2'></script>
+<script type='text/javascript' src='https://genographic.nationalgeographic.com/wp-content/plugins/portfolio-slideshow-pro/js/jquery.cycle.all.min.js?ver=2.99'></script>
+	<script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"rpm-images.newrelic.com/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-1.newrelic.com","114b3a1f69","1947477","NFVSbRBSCxFYAUBeWA0fcVoWWgoMFgpbWlI=",0,509,new Date().getTime(),"","","","",""]);</script>
+</body>
+</html>

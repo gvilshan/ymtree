@@ -1,0 +1,678 @@
+<div>
+  <div data-dojo-type="dijit/layout/LayoutContainer" data-dojo-props="design:'sidebar'" style="height: 132px;">
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="logoutPane" style="width: 150px;" data-dojo-props="region:'left',style:'width:150px;'">
+      <table width=100% height=100%>
+        <tr>
+          <td align=center valign=middle>
+            <label id="greeting"></label>
+          </td>
+        </tr>
+        <tr>
+          <td align=center valign=middle>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="logoutButton">Logout</button>
+          </td>
+        </tr>
+        <tr>
+          <td align=center>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="profile_manager"><img src="app/images/communityblue24.png"></button>
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="user_manager"><img src="app/images/user_24.png"></button>
+          </td>
+        </tr>
+          
+      </table>
+    </div>
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="participantPane" data-dojo-props="region:'center'">
+      <div data-dojo-type="dijit/layout/TabContainer" style="width: 99%; height: 136px;" data-dojo-id="participantContainer" data-dojo-attach-point="participantContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="gpidSelector" title="GPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <select data-dojo-attach-point="idType" data-dojo-type="dijit/form/Select" style="width: 50px;">
+                        <option value="gpid" selected="selected">GPID</option>
+                        <option value="rid">RID</option>
+                      </select>
+                    </td>
+                    <td>
+                      <span id="p1_gpid">
+                        <input style="width: 105px;" type="text" value="" data-dojo-attach-point="gpid_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                      </span>
+                      <span id="p_rid" style="display: none;">
+                        <input style="width: 105px;" type="text" value="" data-dojo-attach-point="rid_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                      </span>
+                      <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitEditorIconsFindReplace dijitEditorIconFind'" data-dojo-attach-point="searchGpid" type="button"></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Linked<br>GPID:</label>
+                    </td>
+                    <td>
+                      <input style="width: 105px;" type="text" name="alt_gpid" value="" data-dojo-attach-point="alt_gpid_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                      <!-- <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'dijitEditorIconsFindReplace dijitEditorIconFind'" data-dojo-attach-point="searchAltGpid" type="button"></button> -->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>email:</label>
+                    </td>
+                    <td>
+                      <input type="text" name="p_email" value="" data-dojo-attach-point="p_email" data-dojo-type="dijit/form/ValidationTextBox" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="status1">
+                  <fieldset style="border: 1px solid #000000;">
+                  <legend>Status</legend>
+                  <table>
+                    <tr>
+                      <td>
+                        <label>Status:</label>
+                      </td>
+                      <td>
+                        <input type="text" name="p_status" value="" data-dojo-attach-point="p_status" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>Error Code:</label>
+                      </td>
+                      <td>
+                        <input type="text" name="p_error_code" value="" data-dojo-attach-point="p_error_code" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>Comment:</label>
+                      </td>
+                      <td>
+                        <input type="text" name="p_error_comment" value="" data-dojo-attach-point="p_error_comment" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                  </table>
+                  </fieldset>
+                </div>
+              </td>
+              <td>
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="timestamps1">
+                  <fieldset style="border: 1px solid #000000;">
+                  <legend>Timestamps</legend>
+                  <table>
+                    <tr>
+                      <td>
+                        <label>create_date:</label>
+                      </td>
+                      <td>
+                        <input style="width: 120px;" type="text" name="p_create_date" value="" data-dojo-attach-point="p_create_date" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>lastupdated:</label>
+                      </td>
+                      <td>
+                        <input style="width: 120px;" type="text" name="p_lastupdated" value="" data-dojo-attach-point="p_lastupdated" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label>research consent:</label>
+                      </td>
+                      <td>
+                        <input style="width: 120px;" type="text" name="p_ratified" value="" data-dojo-attach-point="p_ratified" data-dojo-type="dijit/form/TextBox" />  
+                      </td>
+                    </tr>
+                  </table>
+                  </fieldset>
+                </div>
+              </td>
+              <td>
+                <fieldset style="border: 1px solid #000000;">
+                <legend>Genetics
+            <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="expandButton">Expand Assets</button>
+                </legend>
+                <table>
+                  <tr>
+                    <td>
+                      <label>Y&nbsp;Haplogroup:</label>
+                    </td>
+                    <td>
+                      <input type="text" name="p_yhg" value="" data-dojo-attach-point="p_yhg" data-dojo-type="dijit/form/TextBox" />  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Y&nbsp;Shorthand:</label>
+                    </td>
+                    <td>
+                      <input type="text" name="p_dar_yhg" value="" data-dojo-attach-point="p_dar_yhg" data-dojo-type="dijit/form/TextBox" />  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>MtDNA&nbsp;Haplogroup:</label>
+                    </td>
+                    <td>
+                      <input type="text" name="p_mhg" value="" data-dojo-attach-point="p_mhg" data-dojo-type="dijit/form/TextBox" />  
+                    </td>
+                  </tr>
+                </table>
+                </fieldset>
+              </td>
+            </tr>
+          </table>
+        </div>
+    
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="phenotypeData" title="Demographic Data" style="padding: 0px;">
+          <table>
+            <tr>
+              <td valign=top>
+
+                <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="tableView"><img src="app/images/table-view.jpg"></button> <br>
+                <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="treeView"><img src="app/images/tree-view.png"></button>
+              </td>
+     
+
+              <td>
+                <div data-dojo-type="dijit/layout/StackContainer" data-dojo-attach-point="demographicViewer">
+                <div data-dojo-type="dijit/layout/ContentPane" title="table view" data-dojo-attach-point="tableViewPane">
+                  <table>
+                    <tr>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Participant</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Age:</label>
+                              </td>
+                              <td>
+                                <label id="p_age"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Date of Birth:</label>
+                              </td>
+                              <td>
+                                <label id="p_dob"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Gender:</label>
+                              </td>
+                              <td>
+                                <label id="p_gender"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Father Data</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_father_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Languages:</label>
+                              </td>
+                              <td>
+                                <label id="p_father_languages"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_father_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Paternal Grandparents</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Grandfather Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_pat_grandfather_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandfather PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_pat_grandfather_place_of_birth"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandmother Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_pat_grandmother_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandmother PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_pat_grandmother_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Earliest Paternal Info</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_pat_ancestor_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Language:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_pat_ancestor_language"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_pat_ancestor_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Mother Data</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_mother_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Languages:</label>
+                              </td>
+                              <td>
+                                <label id="p_mother_languages"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_mother_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Maternal Grandparents</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Grandfather Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_mat_grandfather_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandfather PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_mat_grandfather_place_of_birth"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandmother Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_mat_grandmother_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Grandmother PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_mat_grandmother_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      <td>
+                        <fieldset style="border: 1px solid #000000;">
+                          <legend>Earliest Maternal Info</legend>
+                          <table>
+                            <tr>
+                              <td>
+                                <label>Ethnicity:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_mat_ancestor_ethnicity"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>Language:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_mat_ancestor_language"></label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <label>PoB:</label>
+                              </td>
+                              <td>
+                                <label id="p_earliest_mat_ancestor_place_of_birth"></label>
+                              </td>
+                            </tr>
+                          </table>
+                        </fieldset>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div data-dojo-type="dijit/layout/ContentPane" title="tree view" data-dojo-attach-point="treeViewPane">
+                  <table border=0>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td colspan=2><img src="app/images/left-down-blue.png"></td>
+                      <td>&nbsp;</td>
+                      <td id="admin_participant"><img src="app/images/blank.png"></td>
+                      <td>&nbsp;</td>
+                      <td colspan=2 align=right><img src="app/images/right-down-pink.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td><img src="app/images/left-down-blue.png"></td>
+                      <td id="admin_father"><img src="app/images/male.png"></td>
+                      <td><img src="app/images/right-down-pink.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td><img src="app/images/left-down-blue.png"></td>
+                      <td id="admin_mother"><img src="app/images/female.png"></td>
+                      <td><img src="app/images/right-down-pink.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td><img src="app/images/left-down-blue-dotted.png"></td>
+                      <td id="admin_pat_grandfather"><img src="app/images/male.png"></td>
+                      <td>&nbsp;</td>
+                      <td id="admin_pat_grandmother" align=right><img src="app/images/female.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td id="admin_mat_grandfather"><img src="app/images/male.png"></td>
+                      <td>&nbsp;</td>
+                      <td id="admin_mat_grandmother" align=right><img src="app/images/female.png"></td>
+                      <td><img src="app/images/right-down-pink-dotted.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td id="admin_earliest_pat_ancestor"><img src="app/images/male.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td id="admin_earliest_mat_ancestor" align=right><img src="app/images/female.png"></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </tr>
+          </table>
+        </div>
+    
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="mtdnaData" title="MtDNA Data">
+          <table>
+            <tr>
+              <td><div data-dojo-type="dijit/form/SimpleTextarea" style="width: 700px; height: 80px;" data-dojo-attach-point="p_m_mutations" id="p_m_mutations" data-dojo-props="readOnly:true"></div></td>
+              <td valign=top alingn=left>
+                <div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="callMHGMenu">
+                  <div data-dojo-type="dijit/PopupMenuItem">
+                    <span>Call MtDNA<br>Haplogroup</span>
+                    <div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="callMHGSubmenu">
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callMButtonB14full">Using B14 tree (all SNPs)</div>
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callMButtonB14chip">Using B14 tree (chip SNPS only)</div>
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callMButtonB16full">Using B16 tree (all SNPs)</div>
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callMButtonB16chip">Using B16 tree (chip SNPS only)</div>
+                    </div>
+                  </div>
+                </div>
+                <label>Find Marker:</label><br>
+                <table>
+                  <tr>
+                    <td valign=top>
+                      <input style="width: 80px;" type="text" name="mmarker" value="" data-dojo-attach-point="mmarker_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                    </td>
+                    <td valign=top>
+                      <img src="app/images/red_minus.png" id="m_snp_not_found0">
+                      <img src="app/images/green_check_mark.png" id="m_snp_found0">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+    
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="yData" title="Y SNP Data">
+          <table>
+            <tr>
+              <td><div data-dojo-type="dijit/form/SimpleTextarea" style="width: 700px; height: 80px;" data-dojo-attach-point="p_mutations" id="p_mutations" data-dojo-props="readOnly:true"></div></td>
+              <td valign=top alingn=left>
+               <div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="callYHGMenu">
+                  <div data-dojo-type="dijit/PopupMenuItem">
+                    <span>Call Y<br>Haplogroup</span>
+                    <div data-dojo-type="dijit/DropDownMenu" data-dojo-attach-point="callYHGSubmenu">
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callYButton2012">Using 2012 tree</div>
+                      <div data-dojo-type="dijit/MenuItem" data-dojo-attach-point="callYButton2014">Using 2014 tree</div>
+                    </div>
+                  </div>
+                </div>
+               <label>Find Marker:</label><br>
+                <table>
+                  <tr>
+                    <td valign=top>
+                      <input style="width: 80px;" type="text" name="ymarker" value="" data-dojo-attach-point="ymarker_input" data-dojo-type="dijit/form/ValidationTextBox" />
+                    </td>
+                    <td valign=top>
+                      <img src="app/images/red_minus.png" id="snp_not_found0">
+                      <img src="app/images/green_check_mark.png" id="snp_found0">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="yStrData" title="Y STR Data">
+          <table>
+            <tr>
+              <td><div data-dojo-type="dijit/form/SimpleTextarea" style="width: 700px; height: 80px;" data-dojo-attach-point="p_str_mutations" id="p_str_mutations" data-dojo-props="readOnly:true"></div></td>
+            </tr>
+          </table>
+        </div>
+    
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="admixtureData" title="Admixture">
+          <table>
+            <tr>
+              <td>
+                <fieldset style="border: 1px solid #000000;">
+                <legend>Ancient</legend>
+                  <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 200px; height: 66px;" data-dojo-attach-point="ancientPopulations" id="ancientPopulations" data-dojo-props="readOnly:true">
+                  </div>
+                </fieldset>
+              </td>
+              <td>
+                <fieldset style="border: 1px solid #000000;">
+                <legend>Regional</legend>
+                  <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 450px; height: 66px;" data-dojo-attach-point="regionalPopulations" id="regionalPopulations" data-dojo-props="readOnly:true">
+                  </div>
+                </fieldset>
+              </td>
+              <td>
+                <fieldset style="border: 1px solid #000000;">
+                <legend>Closest</legend>
+                  <div data-dojo-type="dijit/form/SimpleTextarea" style="width: 350px; height: 40px;" data-dojo-attach-point="closestPopulations" id="closestPopulations" data-dojo-props="readOnly:true">
+                  </div>
+                  <br>
+                  <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="editRegionalComposition" style="width: 80px;">&lt;&lt;-- Edit</button>
+                  <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="identifyClosestPopulations" style="width: 80px;">Identify...</button>
+                  <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="openReferencePopulations" style="width: 80px;">Reference Populations</button>
+                </fieldset>
+              </td>
+            </tr>
+          </table>
+        </div>
+    
+<!--
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="communityPane" title="Community">
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="yCommunityButton" style="width: 80px;">Y Community</button>
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="mCommunityButton" style="width: 80px;">MtDNA Community</button>
+          <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="mapWorkbenchButton" style="width: 80px;">Map Workbench</button>
+        </div>
+-->
+
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="autosomalFile" title="Autosomal File">
+          <table>
+            <tr>
+              <td valign=top>
+                <table border=1>
+                  <tr>
+                    <td>
+                      <label>File:</label>
+                    </td>
+                    <td>
+                      <label data-dojo-attach-point="p1_autosomal_file_name"></label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Size:</label>
+                    </td>
+                    <td>
+                      <label data-dojo-attach-point="p1_autosomal_file_size"></label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>Date:</label>
+                    </td>
+                    <td>
+                      <label data-dojo-attach-point="p1_autosomal_file_date"></label>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>&nbsp;&nbsp;
+              </td>
+              <td>
+                <table border=1>
+                  <tr>
+                    <td>Chromosome</td>
+                    <td>Total SNPs</td>
+                    <td>Called</td>
+                    <td>Failed</td>
+                  </tr>
+                  <tr>
+                    <td>Y</td>
+                    <td><label data-dojo-attach-point="p1_y_total"></label>
+                    <td><label data-dojo-attach-point="p1_y_called"></label>
+                    <td><label data-dojo-attach-point="p1_y_failed"></label>
+                  </tr>
+                  <tr>
+                    <td>MtDNA</td>
+                    <td><label data-dojo-attach-point="p1_m_total"></label>
+                    <td><label data-dojo-attach-point="p1_m_called"></label>
+                    <td><label data-dojo-attach-point="p1_m_failed"></label>
+                  </tr>
+                  <tr>
+                    <td>Autosomal</td>
+                    <td><label data-dojo-attach-point="p1_a_total"></label>
+                    <td><label data-dojo-attach-point="p1_a_called"></label>
+                    <td><label data-dojo-attach-point="p1_a_failed"></label>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div data-dojo-type="app/SearchPane" data-dojo-attach-point="searchPane" style="width: 432px;" data-dojo-props="region:'right'">
+    </div>
+  </div>
+</div>
+

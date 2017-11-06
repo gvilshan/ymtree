@@ -1,0 +1,81 @@
+<div style="width: 97%; height: 90%">
+  <span data-dojo-type="dijit/layout/StackController" data-dojo-props="containerId: 'hgSearcher'"></span>
+
+  <div data-dojo-type="dijit/layout/StackContainer" data-dojo-id="hgSearcher" style="width: 99%; height: 100%;">
+    <div data-dojo-type="dijit/layout/ContentPane" title="MtDNA Haplogroups">
+      <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" id="borderContainer2">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 30px;">
+          <div data-dojo-attach-point="browser_stats">
+            <label>MtDNA Tree Search </label>
+          </div>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+          <div data-dojo-type="dijit/layout/TabContainer" data-dojo-attach-point="m_tab_search">
+            <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" title="by HG" data-dojo-attach-point="m_by_hg">
+              <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 40px;" data-dojo-attach-point="mt_search1">
+                <label>Enter Haplogroup:</label><br>
+                <select style="width: 140px; margin: 5px;" name="mhgSelect" data-dojo-attach-point="mhgSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="searchAttr: 'name'">
+                </select>
+              </div>
+              <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'" style="height: 600px;">
+                <div id="m_mutations_grid" style="width: 140px; height: 70%; margin: 5px;">
+                </div>
+              </div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="by mutation">
+              <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" title="by mutation" data-dojo-attach-point="m_by_mutation">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 40px;" data-dojo-attach-point="mt_search2">
+                  <label>Enter position number:</label><br>
+                  <select style="width: 140px;" name="posSelect" data-dojo-attach-point="posSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="searchAttr: 'name'">
+                  </select>
+                </div> 
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'" style="height: 70%;">
+                  <div id="m_mhg_grid" style="width: 140px; height: 70%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-dojo-type="dijit/layout/ContentPane" title="Y Haplogroups">
+      <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" id="borderContainer1">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 30px;" data-dojo-attach-point="y_search_area">
+          <div data-dojo-attach-point="browser_stats1">
+            <label>Y Tree Search</label>
+          </div>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'">
+          <div data-dojo-type="dijit/layout/TabContainer" data-dojo-attach-point="y_tab_search">
+            <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" title="by HG" data-dojo-attach-point="y_by_hg">
+              <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 80px;" data-dojo-attach-point="y_search1">
+                <label>Enter Haplogroup:</label><br>
+                <select style="width: 140px; margin: 5px;" name="yhgSelect" data-dojo-attach-point="yhgSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="searchAttr: 'name'">
+                </select>
+                <div id="shorthand" style="margin: 5px;"></div>
+              </div>
+              <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'" style="height: 600px;">
+                <div id="y_mutations_grid" style="width: 140px; height: 70%;  margin: 5px;">
+                </div>
+              </div>
+            </div>
+            <div data-dojo-type="dijit/layout/ContentPane" title="by mutation">
+              <div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false, liveSplitters:false" title="by mutation" data-dojo-attach-point="y_by_mutation">
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" style="height: 40px;" data-dojo-attach-point="y_search2">
+                  <label>Enter SNP:</label><br>
+                  <select style="width: 140px;" name="snpSelect" data-dojo-attach-point="snpSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="searchAttr: 'name'">
+                  </select>
+                </div>
+                <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region: 'center'" style="height: 70%;">
+                  <div id="y_yhg_grid" style="width: 140px; height: 70%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

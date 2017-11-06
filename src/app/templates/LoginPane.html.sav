@@ -1,0 +1,38 @@
+<div>
+  <table>
+    <tr>
+      <td valign=top>
+        <img src=app/images/skype.png>
+        <br>
+      <a id='skypeId1' data-dojo-attach-point="whySkype" data-dojo-type="dijit/layout/LinkPane" data-dojo-props="content:'<u>Why Skype?</u>'">Why Skype?</a>
+      </td>
+      <td>
+        <table>
+          <tr id="user_password_id">
+            <td><label for="user">Skype Username:</label></td>
+            <td><input type="text" id="user" name="user" required="true" style="width: 100px;" data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="skypeUsername" /></td>
+          </tr>
+          <tr>
+            <td><label for="password">Skype Password:</label></td>
+            <td><input type="password" id="password" name="password" required="true" style="width: 100px;" data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="skypePassword" /></td>
+          </tr>
+          <tr>
+            <td colspan=2 align=center>
+              <button data-dojo-type="dijit/form/Button" data-dojo-attach-point="loginButton">Login</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 align=center>
+              <center><div id="rot_arrow"><img src="app/images/rotating_arrow.gif"></div></center>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 align=center>
+              <div id="errmsg"></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

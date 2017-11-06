@@ -1,0 +1,15 @@
+<?php
+// This file controls where to go for reference info (e.g. tree structure).
+if($_SESSION['admin'] == 'admin')
+{
+  $dbconn = @pg_connect("host=10.11.143.63 dbname=postgres user=genodar password=genodar")
+    or die('Could not connect: ' . pg_last_error());
+  $db = "host=10.11.143.63 dbname=postgres user=genodar password=genodar";
+}
+else
+{
+  $dbconn = @pg_connect("host=10.11.143.64 dbname=research user=genodar password=genodar")
+    or die('Could not connect: ' . pg_last_error());
+  $db = "host=10.11.143.64 dbname=research user=genodar password=genodar";
+}
+?>
